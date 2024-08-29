@@ -9,8 +9,9 @@ html {
 }
 
 .page {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -45,7 +46,6 @@ ol {
   display: flex;
   align-items: flex-end;
   gap: 30px;
-  padding-top: 133px;
 }
 
 .visually-hidden {
@@ -67,7 +67,7 @@ ol {
 
 .button {
   color: #fff;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
@@ -123,7 +123,7 @@ ol {
 
 .search-form__fieldset-title {
   color: rgb(255, 255, 255);
-  font-family: Fira Sans Condensed;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 400;
   line-height: 22px;
@@ -149,26 +149,26 @@ ol {
 /* Search Form Label Text */
 
 .search-form__fieldset {
-  height: 54px;
   display: flex;
   border: none;
   flex-direction: column;
   justify-content: space-between;
+  gap: 5px;
 }
 
 .search-form__textfield {
   width: 225px;
-  height: 27px;
+  min-height: 27px;
   background-color: transparent;
   border: none;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   color: #fff;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 22px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: left;
 }
 
@@ -240,6 +240,7 @@ ol {
   text-align: left;
   text-transform: uppercase;
   margin-bottom: 21px;
+  width: 410px;
 }
 
 .content__accent {
@@ -251,8 +252,7 @@ ol {
 .content__list {
   height: 300px;
   overflow-y: auto;
-  position: relative; 
-  scrollbar-width: none;
+  position: relative;
 }
 
 .content__list-item:not(:last-child) {
@@ -266,8 +266,16 @@ ol {
   justify-content: space-between;
 }
 
-.content__video-card:active {
+.content__card-link:active {
   background-color: rgb(84, 80, 80);
+}
+
+.content__card-link {
+  display: block;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__card-link:focus {
@@ -294,7 +302,7 @@ ol {
 
 .content__video-card-description {
   color: rgb(255, 255, 255);
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
@@ -318,7 +326,7 @@ ol {
   outline: none;
 }
 
-.more-button:focus-visible {
+.button:focus-visible {
   outline: 1px solid #fff; 
   outline-offset: 1px;
 }
