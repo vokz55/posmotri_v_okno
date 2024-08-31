@@ -232,7 +232,7 @@ ol {
 
 .title {
   max-height: 212px;
-  font-family: Oswald;
+  font-family: 'Oswald', sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 93%;
@@ -282,7 +282,7 @@ ol {
   outline: none;
 }
 
-.content__list-item:has(:focus-visible) {
+.content__card-link:focus-visible {
   border: 1px solid #fff;
 }
 
@@ -294,10 +294,14 @@ ol {
 
 .content__video-card-title {
   color: rgb(255, 255, 255);
-  font-family: Oswald;
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 200px;
 }
 
 .content__video-card-description {
@@ -306,6 +310,7 @@ ol {
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
+  max-width: 200px;
 }
 
 .content__card-link {
@@ -320,13 +325,4 @@ ol {
 .more-button {
   padding: 6px 0;
   width: 100%;
-}
-
-.more-button:focus {
-  outline: none;
-}
-
-.button:focus-visible {
-  outline: 1px solid #fff; 
-  outline-offset: 1px;
 }
